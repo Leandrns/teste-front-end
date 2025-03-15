@@ -1,0 +1,21 @@
+.produtos-relacionados {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+
+	.produtos {
+		display: flex;
+		gap: 16px;
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		scrollbar-width: none;
+        padding: 50px;
+		.box {
+			min-width: 304px;
+			height: 500px;
+			background-color: gray;
+			border-radius: 10px;
+		}
+	}
+}
