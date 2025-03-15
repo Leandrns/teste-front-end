@@ -1,0 +1,60 @@
+$amarelo: #f7ca11;
+$branco: #ffffff;
+
+.hero-section {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+    
+	img {
+        height: 100%;
+	}
+    
+	.hero-content {
+        position: absolute;
+        top: 0;
+        padding: 0 72px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 966px;
+        height: 100%;
+        gap: 30px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        
+		.texts {
+            color: $branco;
+            
+			h1 {
+                font-weight: 600;
+				font-size: 48px;
+			}
+            
+			h2 {
+                font-size: 32px;
+                font-weight: 600;
+				span {
+					color: $amarelo;
+                    font-weight: 700;
+				}
+			}
+		}
+
+		button {
+			background-color: $amarelo;
+			border: none;
+			width: 206px;
+			height: 50px;
+			border-radius: 5px;
+            color: #000;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+		}
+	}
+}
