@@ -18,3 +18,4 @@ Este teste consiste em um site de um ecommerce. Para o desenvolvimento, foi feit
 
 
 Caso queira apenas visualizar o resultado do aplicação, acesse esse link:
+https://teste-front-end-gamma-smoky.vercel.app/
