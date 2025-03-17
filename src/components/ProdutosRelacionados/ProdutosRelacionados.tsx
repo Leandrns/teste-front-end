@@ -6,7 +6,11 @@ import arrowRight from "../../images/icons/arrow-right.svg";
 import CardProduto from "./CardProduto/CardProduto";
 import NavProdutos from "./NavProdutos/NavProdutos";
 
-function ProdutosRelacionados() {
+type produtosRelacionadosProps = {
+    navProdutosOpen: boolean;
+}
+
+function ProdutosRelacionados({ navProdutosOpen }: produtosRelacionadosProps) {
     const carrosselRef = useRef<HTMLDivElement>(null);
     const produtos = api.products;
 
@@ -23,8 +27,12 @@ function ProdutosRelacionados() {
 
     return (
         <section className="produtos-relacionados">
-            <h2 className="title">Produtos relacionados</h2>
-            <NavProdutos />
+            <div className="title">
+                <div className="line"></div>
+                <h2>Produtos relacionados</h2>
+                <div className="line"></div>
+            </div>
+            {navProdutosOpen ? <NavProdutos /> : <p className="ver-todos">Ver todos</p>}
             <div className="carrossel">
                 <button className="arrow" onClick={() => scroll("left")}><img src={arrowLeft} alt="" /></button>
                 <div className="produtos" ref={carrosselRef}>

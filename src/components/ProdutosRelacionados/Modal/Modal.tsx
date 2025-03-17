@@ -27,7 +27,7 @@ function Modal({ foto, nome, descricao, preco, toggleModal}: modalProps) {
                     </div>
                     <div className="descricao">
                         <p className="texto">{descricao}</p>
-                        <a href="#"><p className="mais-detalhes">Veja mais detalhes do produto ᐳ</p></a>
+                        <a href="."><p className="mais-detalhes">Veja mais detalhes do produto ᐳ</p></a>
                     </div>
                     <div className="comprar">
                         <div className="quantidade">

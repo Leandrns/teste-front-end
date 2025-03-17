@@ -15,14 +15,14 @@ function Header() {
         <header>
             <InfoLoja />
             <div className="main-header">
-                <a href="" className="logo"><img src={logo} alt="" /></a>
+                <a href="." className="logo"><img src={logo} alt="" /></a>
                 <div className="search">
                     <input type="text" className="input-search" placeholder="O que está buscando?" />
                     <button><img src={search} alt="" /></button>
                 </div>
                 <div className="icons-header">
                     {iconsHeader.map((icon, index) => (
-                        <a href="" key={index}>
+                        <a href="." key={index}>
                             <img src={icon} alt="" className="icon-header" />
                         </a>))}
                 </div>

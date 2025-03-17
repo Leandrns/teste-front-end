@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       <Header />
       <HeroSection />
-      <ProdutosRelacionados />
+      <ProdutosRelacionados navProdutosOpen={true} />
+      <ProdutosRelacionados navProdutosOpen={false} />
+      <ProdutosRelacionados navProdutosOpen={false} />
     </div>
   );
 }

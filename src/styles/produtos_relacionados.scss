@@ -13,8 +13,26 @@ $roxo: #271C47;
     flex-direction: column;
     
     .title {
-        color: $azul;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        .line {
+            height: 1px;
+            width: 360px;
+            background-color: #dedede;
+        }
+        h2 {
+            color: $azul;
+            text-align: center;
+        }
+    }
+
+    .ver-todos {
+        font-size: 15px;
+        font-weight: bold;
         text-align: center;
+        color: $cinza-escuro;
     }
 
     .nav-produtos {
@@ -134,6 +152,7 @@ $roxo: #271C47;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    z-index: 2;
 
                     .modal-content {
                         position: relative;
