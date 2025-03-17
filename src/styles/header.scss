@@ -25,6 +25,11 @@ header {
             align-items: center;
             font-size: 12px;
             gap: 5px;
+
+            span {
+                color: $azul;
+                font-weight: bold;
+            }
         }
     }
 

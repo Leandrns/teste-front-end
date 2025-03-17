@@ -5,10 +5,9 @@ $branco: #ffffff;
     height: 390px;
     position: relative;
     overflow: hidden;
-    
-	img {
-        height: 100%;
-	}
+    background-image: url(../images/bg_hero.png);
+    background-size: cover;
+    background-position: center;
     
 	.hero-content {
         position: absolute;

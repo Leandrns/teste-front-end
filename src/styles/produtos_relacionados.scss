@@ -2,97 +2,253 @@ $branco: #FFFFFF;
 $azul: #3442B5;
 $cinza-escuro: #3F3F40;
 $cinza-medio: #9F9F9F;
+$amarelo: #F7CA11;
+$roxo: #271C47;
 
 .produtos-relacionados {
 	display: flex;
-	overflow: hidden;
 	width: 100%;
-	position: relative;
-    padding: 0 20px;
-    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    flex-direction: column;
+    
+    .title {
+        color: $azul;
+        text-align: center;
+    }
 
-	.produtos {
-		display: flex;
-		gap: 16px;
-		overflow-x: auto;
-		scroll-behavior: smooth;
-		scrollbar-width: none;
-        padding: 50px 20px;
-        margin: 0 10px;
-        z-index: 1;
+    .nav-produtos {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 50px;
+        height: 40px;
+        margin-top: 10px;
 
-        .produto {
-            min-width: 304px;
-            height: 500px;
-            box-shadow: 0 3px 19px rgba(0, 0, 0, 0.22);
+        li {
             display: flex;
-            flex-direction: column;
-            justify-content: space-around;
             align-items: center;
-            padding: 20px;
-            color: $cinza-escuro;
-            border-radius: 10px;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #bdbdbd;
+            font-size: 16px;
+            color: #3b3b3b;
+            cursor: pointer;
+            transition: all 0.3s;
 
-            .infos {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-
-                h3 {
-                    font-size: 15px;
-                    font-weight: 300;
-                }
-
-                .preco-antigo {
-                    font-size: 16px;
-                    color: #808080;
-                    text-decoration: line-through;
-                }
-
-                .preco {
-                    font-size: 20px;
-                    font-weight: 600;
-                }
-
-                .parcelas {
-                    font-size: 12px;
-                }
-
-                .frete {
-                    font-size: 12px;
-                    color: $azul;
-                }
+            &:first-child {
+                font-weight: bold;
+                color: $azul;
             }
 
-            .compra-btn {
-                width: 100%;
-                height: 44px;
-                background-color: $azul;
-                color: $branco;
-                font-weight: 600;
-                border: none;
-                border-radius: 4px;
-                cursor: pointer;
-                transition: all 0.3s;
+            &:hover {
+                background-color: #d9d9d9;
+            }
+        }
 
-                &:hover {
-                    background-color: $cinza-medio
+    }
+
+    .carrossel {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        
+        .produtos {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding: 20px;
+            margin: 0 10px;
+    
+            .produto {
+                min-width: 304px;
+                height: 500px;
+                box-shadow: 0 3px 19px rgba(0, 0, 0, 0.22);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px;
+                color: $cinza-escuro;
+                border-radius: 10px;
+    
+                .infos {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+    
+                    h3 {
+                        font-size: 15px;
+                        font-weight: 300;
+                    }
+    
+                    .preco-antigo {
+                        font-size: 16px;
+                        color: #808080;
+                        text-decoration: line-through;
+                    }
+    
+                    .preco {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+    
+                    .parcelas {
+                        font-size: 12px;
+                    }
+    
+                    .frete {
+                        font-size: 12px;
+                        color: $azul;
+                    }
+                }
+    
+                .compra-btn {
+                    width: 100%;
+                    height: 44px;
+                    background-color: $azul;
+                    color: $branco;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+    
+                    &:hover {
+                        background-color: $cinza-medio
+                    }
+                }
+
+                .modal-container {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .modal-content {
+                        position: relative;
+                        width: 770px;
+                        height: 300px;
+                        display: flex;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        .fechar {
+                            position: absolute;
+                            top: 10px;
+                            right: 15px;
+                            border: none;
+                            background: none;
+                            font-weight: bold;
+                            font-size: 24px;
+                            cursor: pointer;
+                        }
+
+                        .detalhes {
+                            width: 50%;
+                            height: 80%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+
+                            .nome {
+                                font-size: 20px;
+                                font-weight: 400;
+                            }
+                            
+                            .preco {
+                                font-size: 20px;
+                                font-weight: 600;
+                            }
+
+                            .descricao p {
+                                font-family: 'Work Sans';
+                                font-size: 11px;
+
+                                &.mais-detalhes {
+                                    color: $azul;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                }
+                            }
+
+                            .comprar {
+                                display: flex;
+                                gap: 12px;
+
+                                .quantidade {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-around;
+                                    width: 110px;
+                                    height: 36px;
+                                    border: solid 1px #d9d9d9;
+                                    border-radius: 5px;
+
+                                    .valor-quantidade {
+                                        text-align: center;
+                                        width: 20px;
+                                    }
+
+                                    button {
+                                        border: none;
+                                        background: none;
+                                        font-size: 24px;
+                                        color: $roxo;
+                                        height: 20px;
+                                        width: 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-align: center;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                .btn-comprar-modal {
+                                    width: 188px;
+                                    height: 36px;
+                                    border: none;
+                                    border-radius: 6px;
+                                    background-color: $amarelo;
+                                    color: $roxo;
+                                    font-weight: bold;
+                                    cursor: pointer;
+                                    transition: all 0.3s;
+
+                                    &:hover {
+                                        background-color: #d9d9d9;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
-	}
-
-    .arrow {
-        min-width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #fff;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        cursor: pointer;
+        .arrow {
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            cursor: pointer;
+        }
     }
 }

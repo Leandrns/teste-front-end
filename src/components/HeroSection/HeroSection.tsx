@@ -1,10 +1,8 @@
-import bgHero from '../../images/bg_hero.png';
 import "../../styles/hero.scss"
 
 function HeroSection() {
     return (
         <div className="hero-section">
-            <img src={bgHero} alt="" />
             <div className='hero-content'>
                 <div className="texts">
                     <h1>Venha conhecer nossas promoções</h1>
