@@ -1,0 +1,38 @@
+$azul: #3442B5;
+
+.navegue-marcas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .title {
+        color: $azul;
+        text-align: center;
+    }
+    
+    .logos-marcas {
+        display: flex;
+        gap: 42px;
+        justify-content: center;
+        
+        .marca {
+            width: 211px;
+            height: 211px;
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.13);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            img {
+                width: 117px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

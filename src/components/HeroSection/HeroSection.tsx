@@ -2,7 +2,7 @@ import "../../styles/hero.scss"
 
 function HeroSection() {
     return (
-        <div className="hero-section">
+        <section className="hero-section">
             <div className='hero-content'>
                 <div className="texts">
                     <h1>Venha conhecer nossas promoções</h1>
@@ -10,9 +10,7 @@ function HeroSection() {
                 </div>
                 <button>Ver produto</button>
             </div>
-
-
-        </div>
+        </section>
     );
 }
 

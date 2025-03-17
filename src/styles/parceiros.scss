@@ -1,0 +1,54 @@
+$amarelo: #F7CA11;
+$roxo: #271C47;
+
+.container-parceiros {
+    height: 350px;
+    width: 634px;
+    background-image: url(../images/bg_parceiros.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 20px;
+
+    .content-parceiro {
+        height: 80%;
+        width: 100%;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 40px;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 95%);
+        border-radius: 20px;
+
+        .title-parceiro {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .text-parceiro {
+            font-size: 16px;
+            width: 200px;
+        }
+
+        .btn-confira {
+            border: none;
+            background-color: $amarelo;
+            color: $roxo;
+            font-size: 16px;
+            font-weight: bold;
+            width: 145px;
+            height: 48px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #d9d9d9;
+            }
+        }
+    }
+}

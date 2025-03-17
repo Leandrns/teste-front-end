@@ -1,0 +1,48 @@
+$azul: #3019B2;
+
+.departamentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 42px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    .card-departamento {
+        height: 170px;
+        width: 140px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+        &:first-child {
+            .icon-departamento {
+                background-color: #ffffff;
+            }
+
+            p {
+                font-weight: 600;
+                color: $azul;
+            }
+        }
+
+        .icon-departamento {
+            height: 128px;
+            width: 128px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 11px rgba(0, 0, 0, 0.13);
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                background-color: #ffffff;
+            }
+        }
+    }
+}

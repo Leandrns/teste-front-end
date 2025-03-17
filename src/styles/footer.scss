@@ -1,0 +1,141 @@
+$roxo: #271C47;
+$amarelo: #F7CA11;
+
+footer {
+    margin-top: 50px;
+    background-color: #f4f4f4;
+
+    .newsletter {
+        background-color: $roxo;
+        display: flex;
+        color: #fff;
+        height: 162px;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .texts {
+            width: 515px;
+            h2 {
+                font-size: 32px;
+                font-weight: 600;
+                font-family: 'Outfit';
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 200;
+            }
+        }
+
+        form {
+            .inputs-btn {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 10px;
+
+                input[type="email"], 
+                input[type="text"] {
+                    width: 233px;
+                    height: 42px;
+                    border: none;
+                    border-radius: 8px;
+                    padding: 0 20px;
+                }
+
+                button {
+                    width: 157px;
+                    height: 42px;
+                    border: none;
+                    border-radius: 8px;
+                    background-color: $amarelo;
+                    color: $roxo;
+                    font-size: 14px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: #d9d9d9;
+                    }
+                }
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        height: 282px;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .logo-media {
+            width: 354px;
+            height: 159px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .logo {
+                width: 164px;
+            }
+
+            .text-empresa {
+                font-size: 14px;
+                font-weight: 300;
+            }
+
+            .media-icons {
+                display: flex;
+                gap: 25px;
+            }
+        }
+
+        .divisor-line {
+            height: 198px;
+            width: 1px;
+            background-color: rgba($color: #282828, $alpha: 0.18);
+        }
+
+        .container-footer-links {
+            display: flex;
+            gap: 100px;
+            
+            .footer-links {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                color: rgba($color: #222222, $alpha: 0.7);
+
+                .title {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+
+                a {
+                    font-size: 14px;
+                    color: rgba($color: #222222, $alpha: 0.7);
+                    transition: all 0.2s ease-in;
+
+                    &:hover {
+                        color: $roxo;
+                    }
+                }
+            }
+        }
+    }
+
+    .direitos-autorais {
+        height: 47px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        font-size: 13px;
+        background-color: #fff;
+    }
+}
